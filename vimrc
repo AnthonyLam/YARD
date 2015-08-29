@@ -65,5 +65,7 @@ autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
 
