@@ -12,26 +12,41 @@ set rtp+=~/.vim/bundle/neobundle.vim
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Configure all the plugins
-NeoBundleFetch 'gmarik/Vundle.vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'cdmedia/itg_flat_vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/gist-vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'Valloric/YouCompleteMe'
 set fillchars+=stl:\ ,stlnc:\
 
 call neobundle#end()
-filetype indent on
+filetype plugin indent on
 NeoBundleCheck
 
 """""""""""""""""""" Theming """""""""""""""""""" 
 syntax enable
 colorscheme itg_flat
+
+let g:lightline = {
+ \  'active': {
+ \       'left': [ ['mode','paste'],['fugitive','readonly','filename','modified'] ]
+ \  },
+ \  'component': {
+ \      'readonly': '%{&readonly?"X":""}',
+ \      'modified': '%{&modified?"+":&modifiable?"":"-"}',
+ \      'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+ \  },
+ \  'component_visible_condition': {
+ \      'readonly': '(&readonly)',
+ \      'modified': '(&modified||!&modifiable)',
+ \      'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+ \  }
+ \}
 
 """""""""""""""""""" Files """"""""""""""""""""
 set nobackup
@@ -59,6 +74,7 @@ set wrap " Wrap Lines
 " Space searches and ctrl-space searches backwards
 map <space> /
 map <c-space> ?
+let mapleader = ","
 
 "Nerd Tree open and close automatically. CTRL-N to toggle
 autocmd vimenter * NERDTree
