@@ -22,6 +22,7 @@ NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'wting/rust.vim'
 set fillchars+=stl:\ ,stlnc:\
 
 call neobundle#end()
