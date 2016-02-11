@@ -22,7 +22,7 @@ NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'wting/rust.vim'
+NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
 set fillchars+=stl:\ ,stlnc:\
 
 call neobundle#end()
@@ -75,7 +75,9 @@ set wrap " Wrap Lines
 " Space searches and ctrl-space searches backwards
 map <space> /
 map <c-space> ?
+
 let mapleader = ","
+nmap <leader>m :w<cr>:make<cr>
 
 "Nerd Tree open and close automatically. CTRL-N to toggle
 autocmd vimenter * NERDTree
