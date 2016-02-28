@@ -56,7 +56,10 @@ set noswapfile
 
 """""""""""""""""""" Text Editing """"""""""""""""""""
 set number
-set cursorline
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+syntax sync minlines=256
 set expandtab
 set smarttab
 
