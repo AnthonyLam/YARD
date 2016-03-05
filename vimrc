@@ -9,26 +9,24 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/neobundle.vim
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call plug#begin(expand('~/.vim/bundle/'))
 
 " Configure all the plugins
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'cdmedia/itg_flat_vim'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
-NeoBundle 'junegunn/goyo.vim'
+Plug 'cdmedia/itg_flat_vim'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
+Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'junegunn/goyo.vim'
 set fillchars+=stl:\ ,stlnc:\
 
-call neobundle#end()
+call plug#end()
 filetype plugin indent on
-NeoBundleCheck
 
 """""""""""""""""""" Theming """""""""""""""""""" 
 syntax enable
