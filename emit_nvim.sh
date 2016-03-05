@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 backup_dir=~/dotfiles/backup
-files="bashrc vimrc Xresources"
+files="bash_it tmux.conf bashrc vimrc Xresources"
 
 # Backup previous files into ./backup folder
 echo "Creating $backup_dir for backup of existing dotfiles"
