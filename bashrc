@@ -36,5 +36,6 @@ export SCM_CHECK=true
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
+eval $(thefuck --alias)
 # Load Bash It
 source $BASH_IT/bash_it.sh

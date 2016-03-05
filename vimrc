@@ -23,6 +23,7 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
+NeoBundle 'junegunn/goyo.vim'
 set fillchars+=stl:\ ,stlnc:\
 
 call neobundle#end()
