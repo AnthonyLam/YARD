@@ -82,7 +82,7 @@ let mapleader = ","
 nmap <leader>m :w<cr>:make<cr>
 
 "Nerd Tree open and close automatically. CTRL-N to toggle
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
