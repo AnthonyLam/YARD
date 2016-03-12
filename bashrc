@@ -5,13 +5,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export ANDROID_HOME=~/Android/Sdk/
+export ANDROID_HOME=$HOME/Android/Sdk/
 
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Path to the bash it configuration
-export BASH_IT="~/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
