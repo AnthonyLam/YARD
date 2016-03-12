@@ -90,3 +90,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 
+""""""""""""""""""""" Latex """"""""""""""""""""""""
+let g:LatexBox_latexmk_preview_continuously = 1
+let g:LatexBox_quickfix=2
+

@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 backup_dir=~/dotfiles/backup
-files="bash_it bashrc vimrc Xresources"
+files="bash_it tmux.conf bashrc vimrc Xresources"
 
 # Backup previous files into ./backup folder
 echo "Creating $backup_dir for backup of existing dotfiles"
@@ -22,5 +22,16 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
     echo "---copied"
 done
+
+#nvim specific
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+echo "-- Installing vim-plug"
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+#tmux specific
+echo "-- Installing TPM"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "---done"
