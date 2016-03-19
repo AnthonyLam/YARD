@@ -23,6 +23,7 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'junegunn/goyo.vim'
+Plug 'kien/ctrlp.vim'
 set fillchars+=stl:\ ,stlnc:\
 
 call plug#end()
