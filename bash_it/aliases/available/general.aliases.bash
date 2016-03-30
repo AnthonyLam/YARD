@@ -26,7 +26,7 @@ alias update='yaourt -Syu --aur --noconfirm'
 alias myip='curl http://ipecho.net/plain; echo'
 
 # Location aliases
-alias uci='cd ~/Dropbox/My\ Documents/school_stuff/UCI/'
+alias uci='cd ~/Dropbox/My\ Documents/school_stuff/'
 alias aer='cd ~/Dropbox/My\ Documents/Aerserv'
 
 # Language aliases
