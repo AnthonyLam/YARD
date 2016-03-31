@@ -24,6 +24,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
 set fillchars+=stl:\ ,stlnc:\
 
 call plug#end()
