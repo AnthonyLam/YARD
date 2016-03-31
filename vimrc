@@ -20,9 +20,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
-Plug 'junegunn/goyo.vim'
+Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
 set fillchars+=stl:\ ,stlnc:\
 
 call plug#end()
@@ -84,13 +85,15 @@ nmap <leader>m :w<cr>:make<cr>
 "Nerd Tree open and close automatically. CTRL-N to toggle
 "autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
+map <C-t> :TagbarToggle<CR>
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 
-""""""""""""""""""""" Latex """"""""""""""""""""""""
+""""""""""""""""""""" Let """"""""""""""""""""""""
 let g:LatexBox_latexmk_preview_continuously = 1
 let g:LatexBox_quickfix=2
+let g:deoplete#enable_at_startup=1
 
