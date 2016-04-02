@@ -27,6 +27,7 @@ alias myip='curl http://ipecho.net/plain; echo'
 
 # Location aliases
 alias uci='cd ~/Dropbox/My\ Documents/school_stuff/'
+alias lab='ssh anthonml@openlab.ics.uci.edu'
 alias aer='cd ~/Dropbox/My\ Documents/Aerserv'
 
 # Language aliases
