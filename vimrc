@@ -9,6 +9,10 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/neobundle.vim
 
+function! DoRemote(arg)
+    UpdateRemotePlugins
+endfunction
+
 call plug#begin(expand('~/.vim/bundle/'))
 
 " Configure all the plugins
@@ -20,7 +24,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', {'do':function('DoRemote')}
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
