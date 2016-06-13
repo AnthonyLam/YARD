@@ -25,6 +25,7 @@ Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
 set fillchars+=stl:\ ,stlnc:\
 
 call plug#end()
@@ -82,6 +83,7 @@ map <c-space> ?
 
 let mapleader = ","
 nmap <leader>m :w<cr>:make<cr>
+map <leader> <plug>(eaymotion-prefix)
 
 "Nerd Tree open and close automatically. CTRL-N to toggle
 "autocmd vimenter * NERDTree

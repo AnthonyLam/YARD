@@ -1,5 +1,5 @@
 URxvt*font: xft:Fantasque Sans Mono:size=11:style=Regular
-URxvt*letterSpace: -1
+!URxvt*letterSpace: -1
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
