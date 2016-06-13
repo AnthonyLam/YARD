@@ -5,7 +5,6 @@ filetype plugin on
 set autoread
 
 """""""""""""""""""" Vundle """""""""""""""""""" 
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/neobundle.vim
 
@@ -25,7 +24,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/deoplete.nvim', {'do':function('DoRemote')}
-Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
