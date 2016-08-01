@@ -5,7 +5,6 @@ filetype plugin on
 set autoread
 
 """""""""""""""""""" Vundle """""""""""""""""""" 
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/neobundle.vim
 
@@ -25,10 +24,14 @@ Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/deoplete.nvim', {'do':function('DoRemote')}
-Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
+
+" Deoplete plugins
+Plug 'zchee/deoplete-go', {'do':'make'}
 set fillchars+=stl:\ ,stlnc:\
 
 call plug#end()
@@ -86,6 +89,7 @@ map <c-space> ?
 
 let mapleader = ","
 nmap <leader>m :w<cr>:make<cr>
+map <leader> <Plug>(easymotion-prefix)
 
 "Nerd Tree open and close automatically. CTRL-N to toggle
 "autocmd vimenter * NERDTree
@@ -98,7 +102,6 @@ set whichwrap+=<,>,h,l
 
 
 """"""""""""""""""""" Let """"""""""""""""""""""""
-let g:LatexBox_latexmk_preview_continuously = 1
-let g:LatexBox_quickfix=2
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#enable_at_startup=1
 

@@ -1,4 +1,4 @@
-URxvt*font: xft:Fantasque Sans Mono:size=11:style=Regular
+URxvt*font: xft:Fantasque Sans Mono:size=13:style=Regular
 URxvt*letterSpace: -1
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
