@@ -1,0 +1,1 @@
+/home/anthony/dotfiles/omf//themes/chain/fish_prompt.fish

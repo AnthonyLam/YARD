@@ -15,7 +15,7 @@ export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='tylenol'
+#export BASH_IT_THEME='tylenol'
 
 # Your place for hosting Git repos. I use this for private repos.
 export GIT_HOSTING='git@git.domain.com'
@@ -37,6 +37,9 @@ export SCM_CHECK=true
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 # Load Bash It
-source $BASH_IT/bash_it.sh
+#source $BASH_IT/bash_it.sh
+
+@source /etc/profile.d/*
+fish && exit
