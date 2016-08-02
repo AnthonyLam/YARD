@@ -101,4 +101,5 @@ set whichwrap+=<,>,h,l
 let g:LatexBox_latexmk_preview_continuously = 1
 let g:LatexBox_quickfix=2
 let g:deoplete#enable_at_startup=1
+let g:indentLine_concealcursor='vc'
 
