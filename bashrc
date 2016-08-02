@@ -39,7 +39,7 @@ export SCM_CHECK=true
 
 #eval $(thefuck --alias)
 # Load Bash It
-#source $BASH_IT/bash_it.sh
+source $BASH_IT/bash_it.sh
 
-@source /etc/profile.d/*
-fish && exit
+source /etc/profile.d/*
+fish && exit && exit
