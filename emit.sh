@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
 dir=~/dotfiles
 backup_dir=~/dotfiles/backup
-files="vimrc Xresources oh-my-zsh zshrc"
+files="vimrc Xresources zprezto"
 
 # Backup previous files into ./backup folder
 echo "Creating $backup_dir for backup of existing dotfiles"
@@ -29,5 +29,10 @@ ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 echo "-- Installing vim-plug"
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 
 echo "---done"
