@@ -77,8 +77,7 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 export SSH_ASKPASS="/usr/bin/ksshaskpass"
 export LIB_AS_UTILS_HOME="/home/anthony/Documents/cpp_lib/libasutils"
 export GTEST_HOME="/home/anthony/Documents/cpp_lib/googletest/googletest"
-export BOOST_CPP_HOME="/usr/lib/"
-export EIGEN_HOME="/usr/include/eigen3/"
+export BOOST_CPP_HOME="/home/anthony/Documents/cpp_lib/boost_1_61_0"
 export LIB_MICROHTTP_HOME="/home/anthony/Documents/cpp_lib/libmicrohttpd-0.9.52/build"
 export LIB_LOG4CPP_HOME="/home/anthony/Documents/cpp_lib/log4cpp/build"
 export LIB_UUID_HOME="/home/anthony/Documents/cpp_lib/libuuid-1.0.3/build"
@@ -87,7 +86,4 @@ export LD_LIBRARYPATH=$LD_LIBRARY_PATH:$LIB_UUID_HOME/lib/
 export LD_LIBRARYPATH=$LD_LIBRARY_PATH:$LIB_LOG4CPP_HOME/lib/
 export LD_LIBRARYPATH=$LD_LIBRARY_PATH:$LIB_MICROHTTP_HOME/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BOOST_CPP_HOME/stage/lib/
-
-# Give Maven HEAPS OF HEAP
-export MAVEN_OPTS="-Xmx1G"
 
