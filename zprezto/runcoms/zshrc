@@ -41,3 +41,9 @@ alias -- -='cd -'        # Go back
 
 # Locations
 source /etc/profile.d/vte.sh
+source ~/.zshenv
+. ~/dotfiles/z.sh
+eval "$(thefuck --alias)"
+
+#  SSH Agent
+eval $(keychain --eval --quiet id_rsa)

@@ -20,7 +20,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 
 " Deoplete plugins
