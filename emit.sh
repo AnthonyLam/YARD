@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 backup_dir=~/dotfiles/backup
-files="vimrc Xresources zprezto"
+files=("vimrc" "Xresources" "zprezto")
 
 # Backup previous files into ./backup folder
 echo "Creating $backup_dir for backup of existing dotfiles"

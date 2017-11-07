@@ -4,6 +4,9 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+export GOPATH="/home/anthony/Documents/go"
+export PATH=$PATH:$GOPATH/bin
+. /usr/lib/z.sh
 
 #
 # Browser
@@ -19,6 +22,7 @@ fi
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export PAGER='less'
 
 #
