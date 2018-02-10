@@ -42,6 +42,13 @@ alias -- -='cd -'        # Go back
 # Locations
 source /etc/profile.d/vte.sh
 source ~/.zshenv
+
+# Chef + Ruby Bullshit
+#export PATH="/opt/chefdk/bin:/home/anthony/.chefdk/gem/ruby/2.4.0/bin:/opt/chefdk/embedded/bin":"$GOPATH/bin":$PATH
+#export GEM_ROOT="/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
+#export GEM_HOME="/home/anthony/.chefdk/gem/ruby/2.4.0"
+#export GEM_PATH="/home/anthony/.chefdk/gem/ruby/2.4.0:/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
+
 . ~/dotfiles/z.sh
 eval "$(thefuck --alias)"
 
