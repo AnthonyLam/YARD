@@ -8,10 +8,6 @@ set autoread
 filetype off
 set rtp+=~/.vim/bundle/neobundle.vim
 
-function! DoRemote(arg)
-    UpdateRemotePlugins
-endfunction
-
 call plug#begin(expand('~/.vim/bundle/'))
 
 " Configure all the plugins
@@ -22,16 +18,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
-Plug 'tpope/vim-surround'
-Plug 'Shougo/deoplete.nvim', {'do':function('DoRemote')}
-Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 
 " Deoplete plugins
-Plug 'zchee/deoplete-go', {'do':'make'}
 set fillchars+=stl:\ ,stlnc:\
 
 call plug#end()
@@ -99,9 +91,4 @@ map <C-t> :TagbarToggle<CR>
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-
-
-""""""""""""""""""""" Let """"""""""""""""""""""""
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#enable_at_startup=1
 
