@@ -74,16 +74,10 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-export SSH_ASKPASS="/usr/bin/ksshaskpass"
-export LIB_AS_UTILS_HOME="/home/anthony/Documents/cpp_lib/libasutils"
-export GTEST_HOME="/home/anthony/Documents/cpp_lib/googletest/googletest"
-export BOOST_CPP_HOME="/home/anthony/Documents/cpp_lib/boost_1_61_0"
-export LIB_MICROHTTP_HOME="/home/anthony/Documents/cpp_lib/libmicrohttpd-0.9.52/build"
-export LIB_LOG4CPP_HOME="/home/anthony/Documents/cpp_lib/log4cpp/build"
-export LIB_UUID_HOME="/home/anthony/Documents/cpp_lib/libuuid-1.0.3/build"
 
-export LD_LIBRARYPATH=$LD_LIBRARY_PATH:$LIB_UUID_HOME/lib/
-export LD_LIBRARYPATH=$LD_LIBRARY_PATH:$LIB_LOG4CPP_HOME/lib/
-export LD_LIBRARYPATH=$LD_LIBRARY_PATH:$LIB_MICROHTTP_HOME/lib/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BOOST_CPP_HOME/stage/lib/
-
+# Hadoop
+alias hstart="/usr/local/Cellar/hadoop/2.8.2/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.8.2/sbin/start-yarn.sh"
+alias hstop="/usr/local/Cellar/hadoop/2.8.2/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.8.2/sbin/stop-dfs.sh"
+# TEZ_PATH="/Users/anthonylam/Documents/reporting/apache-tez-0.8.5-src/distribution"
+# export HADOOP_CLASSPATH=${TEZ_PATH}:${TEZ_PATH}/*:${TEZ_PATH}/lib/*
+# export HADOOP_OPTS="-Djava.library.path=/usr/local/Cellar/hadoop/2.8.2/libexec/share/hadoop/common"

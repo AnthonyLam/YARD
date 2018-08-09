@@ -5,6 +5,7 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -16,45 +17,25 @@ source "$HOME/.zprezto/modules/prompt/functions/prompt_bureau_setup" red green y
 
 # Aliases
 # List directory contents
-alias ls='exa'        # Compact view, show colors
-alias la='exa -AF'       # Compact view, show hidden
+alias ls='exa -G'        # Compact view, show colors
+alias la='ls -AF'       # Compact view, show hidden
 alias ll='exa -al'
 alias q='exit'
 
-alias conda_on='source /opt/anaconda/bin/activate root'
-alias conda_off='source /opt/anaconda/bin/deactivate root'
+alias _="sudo"
 
-# Custom aliases
-alias gitc='git commit -am $1'
-alias gitp='git push'
-alias update='yay -Syu --noconfirm'
+alias bhtunnel="sshuttle --dns -r anthony.lam@bh.aerserv.com 10.0.0.0/16"
 
-# Network aliases
-alias myip='curl http://ipecho.net/plain; echo'
-
-# Language aliases
-
-alias ..='cd ..'         # Go up one directory
-alias ...='cd ../..'     # Go up two directories
-alias ....='cd ../../..' # Go up three directories
-alias -- -='cd -'        # Go back
-
-# Chef + Ruby Bullshit
-#export PATH="/opt/chefdk/bin:/home/anthony/.chefdk/gem/ruby/2.4.0/bin:/opt/chefdk/embedded/bin":"$GOPATH/bin":$PATH
-#export GEM_ROOT="/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
-#export GEM_HOME="/home/anthony/.chefdk/gem/ruby/2.4.0"
-#export GEM_PATH="/home/anthony/.chefdk/gem/ruby/2.4.0:/opt/chefdk/embedded/lib/ruby/gems/2.4.0"
-
-alias transfer='bash ~/transfer.sh $1'
+if [ $(uname) = "Linux" ]
+then
+  alias ls="exa"
+fi
 
 # EXPORTS
-export PYTHONPATH="/home/anthony/Documents/QA/qa-utils/"
-export PATH="/home/anthony/Documents/liquibase":"/home/anthony/.config/redis-trib":$PATH
-source /etc/profile.d/vte.sh
-source ~/.zshenv
+export PYTHONPATH="/Users/anthonylam/Documents/qa/qa-utils/"
+export GOPATH="/Users/anthonylam/Documents/go"
+export PATH="/opt/liquibase":"/home/anthony/.config/redis-trib":"$GOPATH/bin":$PATH
+export PATH="/usr/local/anaconda3/bin":$PATH
+. "/usr/local/etc/profile.d/z.sh"
 
-. ~/dotfiles/z.sh
-eval "$(thefuck --alias)"
-
-#  SSH Agent
-eval $(keychain --eval --quiet id_rsa)
+eval "$(rbenv init -)"

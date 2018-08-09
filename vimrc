@@ -12,18 +12,12 @@ call plug#begin(expand('~/.vim/bundle/'))
 
 " Configure all the plugins
 Plug 'cdmedia/itg_flat_vim'
-Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
-Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-
-" Deoplete plugins
-set fillchars+=stl:\ ,stlnc:\
 
 call plug#end()
 filetype plugin indent on
